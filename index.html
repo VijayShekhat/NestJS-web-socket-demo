@@ -1,0 +1,18 @@
+<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+<script>
+    const socket = io('http://localhost:3000');
+
+    socket.on('connect', () => {
+        console.log('Connected to WebSocket server');
+    });
+
+    socket.on('addBook', (data) => {
+        console.log('Book added:', data);
+        // Update the UI or notify the user
+    });
+
+    socket.on('updateBook', (data) => {
+        console.log('Book updated:', data);
+        // Update the UI or notify the user
+    });
+</script>
