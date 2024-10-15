@@ -9,11 +9,11 @@ import { Book } from './book/book.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'db',
       port: 5432,
       username: 'postgres',
       password: 'vijay',
-      database: 'web-socket-demo',
+      database: process.env.DATABASE_NAME,
       entities: [Book],
       synchronize: true,
     }),
